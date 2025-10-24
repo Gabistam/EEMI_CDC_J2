@@ -1,0 +1,1785 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Méthodologies de Gestion de Projet - Étude de Faisabilité et Cahier des Charges</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation fixe -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">Méthodologies de Gestion de Projet</h1>
+            <ul class="nav-links">
+                <li><a href="#introduction" class="nav-link">Introduction</a></li>
+                <li><a href="#classiques" class="nav-link">Classiques</a></li>
+                <li><a href="#agile" class="nav-link">Agile</a></li>
+                <li><a href="#scrum" class="nav-link">Scrum</a></li>
+                <li><a href="#choix" class="nav-link">Le Choix</a></li>
+                <li><a href="#faisabilite" class="nav-link">Étude de Faisabilité</a></li>
+                <li><a href="#synthese" class="nav-link">Synthèse</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <!-- Section Introduction -->
+        <section id="introduction" class="section">
+            <h2 class="section-title">Introduction : Qu'est-ce qu'un projet ?</h2>
+            
+            <div class="dropdown" data-target="intro-content">
+                <h3 class="dropdown-title">🎯 Objectifs et concepts fondamentaux</h3>
+                <div class="dropdown-content" id="intro-content">
+                    <p><strong>Objectif :</strong> Comprendre les enjeux de la gestion de projet et la nécessité d'une méthodologie adaptée dans le contexte de l'étude de faisabilité et du cahier des charges.</p>
+                    
+                    <p><strong>Définition d'un projet :</strong> Un projet est une opération ponctuelle ayant un début et une fin, nécessitant la mise en œuvre de ressources humaines et matérielles pour sa réalisation. Contrairement aux opérations courantes, un projet est temporaire, unique et progressivement élaboré.</p>
+                    
+                    <p><strong>Analogie :</strong> Imaginez la différence entre cuisiner le même plat tous les jours (opération) et organiser un mariage (projet). Le mariage est unique, temporaire, avec un objectif précis et des contraintes spécifiques.</p>
+                    
+                    <p><strong>Contexte méthodologique :</strong> Le choix de la méthodologie de gestion de projet doit être défini dès l'étude de faisabilité et formalisé dans le cahier des charges. Cette décision impacte directement la réussite du projet et sa capacité à s'adapter aux contraintes identifiées.</p>
+                    
+                    <div class="alert alert-info">
+                        <strong>Point important :</strong> Tout projet doit respecter le triangle coût/délai/qualité tout en satisfaisant les parties prenantes. La méthodologie choisie influence directement la gestion de ces contraintes.
+                    </div>
+                </div>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card card-primary">
+                    <h4>📋 Caractéristiques d'un projet</h4>
+                    <ul>
+                        <li><strong>Temporaire :</strong> Début et fin définis</li>
+                        <li><strong>Unique :</strong> Produit ou service spécifique</li>
+                        <li><strong>Progressif :</strong> Élaboration par étapes</li>
+                        <li><strong>Objectif :</strong> Livrable défini</li>
+                        <li><strong>Contraintes :</strong> Ressources limitées</li>
+                        <li><strong>Incertitude :</strong> Risques à gérer</li>
+                    </ul>
+                </div>
+
+                <div class="card card-secondary">
+                    <h4>🎯 Objectifs SMART</h4>
+                    <ul>
+                        <li><strong>S</strong>pécifique : Clair et précis</li>
+                        <li><strong>M</strong>esurable : Quantifiable</li>
+                        <li><strong>A</strong>tteignable : Réaliste</li>
+                        <li><strong>R</strong>éaliste : Adapté aux ressources</li>
+                        <li><strong>T</strong>emporel : Délimité dans le temps</li>
+                    </ul>
+                </div>
+
+                <div class="card card-accent">
+                    <h4>⚖️ Triangle de contraintes</h4>
+                    <ul>
+                        <li><strong>Coût :</strong> Budget disponible</li>
+                        <li><strong>Délai :</strong> Temps alloué</li>
+                        <li><strong>Qualité :</strong> Niveau d'exigence</li>
+                        <li><strong>Périmètre :</strong> Fonctionnalités incluses</li>
+                        <li><strong>Risque :</strong> Incertitudes à maîtriser</li>
+                        <li><strong>Ressources :</strong> Moyens humains et matériels</li>
+                    </ul>
+                </div>
+
+                <div class="card card-gradient">
+                    <h4>👥 Parties prenantes</h4>
+                    <ul>
+                        <li><strong>Sponsor :</strong> Financeur du projet</li>
+                        <li><strong>Client :</strong> Bénéficiaire final</li>
+                        <li><strong>Équipe :</strong> Réalisateurs</li>
+                        <li><strong>Utilisateurs :</strong> Utilisateurs finaux</li>
+                        <li><strong>Fournisseurs :</strong> Prestataires externes</li>
+                        <li><strong>Régulateurs :</strong> Organismes de contrôle</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="dropdown" data-target="cycles-projet">
+                <h3 class="dropdown-title">🔄 Cycles de vie projet et choix méthodologique</h3>
+                <div class="dropdown-content" id="cycles-projet">
+                    <p><strong>Importance du cycle de vie :</strong> Le cycle de vie d'un projet définit les phases par lesquelles il passe de son initiation à sa clôture. Le choix de la méthodologie détermine la structure de ce cycle de vie.</p>
+                    
+                    <div class="cards-grid">
+                        <div class="card card-primary">
+                            <h4>🔄 Cycle Prédictif (Cascade)</h4>
+                            <ul>
+                                <li>Phases séquentielles</li>
+                                <li>Exigences définies en amont</li>
+                                <li>Contrôle rigoureux</li>
+                                <li>Documentation exhaustive</li>
+                            </ul>
+                        </div>
+                        <div class="card card-secondary">
+                            <h4>🔄 Cycle Adaptatif (Agile)</h4>
+                            <ul>
+                                <li>Itérations courtes</li>
+                                <li>Évolution des exigences</li>
+                                <li>Feedback continu</li>
+                                <li>Livraisons fréquentes</li>
+                            </ul>
+                        </div>
+                        <div class="card card-accent">
+                            <h4>🔄 Cycle Hybride</h4>
+                            <ul>
+                                <li>Combinaison d'approches</li>
+                                <li>Adaptation par phase</li>
+                                <li>Flexibilité contextuelle</li>
+                                <li>Optimisation des avantages</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert alert-warning">
+                <strong>⚠️ Erreur courante :</strong> Confondre projet et processus. Un processus est répétitif et continu, un projet est unique et temporaire. Cette distinction est cruciale pour le choix méthodologique.
+            </div>
+
+            <!-- Quiz 1 : Introduction -->
+            <div class="quiz-container">
+                <h3 class="quiz-title">📝 Quiz 1 : Introduction aux Fondamentaux</h3>
+                <p class="quiz-description">Testez vos connaissances sur les concepts fondamentaux de la gestion de projet</p>
+
+                <div id="quiz1-question" class="quiz-question">
+                    <p id="quiz1-question-text" class="question-text"></p>
+                    <div id="quiz1-answers" class="quiz-answers"></div>
+                    <button id="quiz1-submit" class="quiz-btn" disabled>Valider la réponse</button>
+                </div>
+
+                <div id="quiz1-result" class="quiz-result" style="display:none;">
+                    <div id="quiz1-explanation" class="explanation"></div>
+                    <button id="quiz1-next" class="quiz-btn">Question suivante</button>
+                </div>
+
+                <div class="quiz-footer">
+                    <span id="quiz1-progress">Question 1/5</span>
+                    <span id="quiz1-score">Score: 0/0</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Méthodes Classiques -->
+        <section id="classiques" class="section">
+            <h2 class="section-title">Méthodes Classiques : Cascade et Cycle en V</h2>
+            
+            <div class="dropdown" data-target="classiques-content">
+                <h3 class="dropdown-title">🏗️ Fondements des approches séquentielles</h3>
+                <div class="dropdown-content" id="classiques-content">
+                    <p><strong>Objectif :</strong> Maîtriser les approches séquentielles et comprendre leurs contextes d'excellence dans l'étude de faisabilité.</p>
+                    
+                    <p><strong>Origine historique :</strong> Ces méthodes proviennent de l'industrie manufacturière et du BTP, où les phases séquentielles sont une nécessité physique. Winston Royce a formalisé le modèle Cascade en 1970 pour l'industrie logicielle.</p>
+                    
+                    <p><strong>Analogie :</strong> Construire un bâtiment - vous ne pouvez pas installer la toiture avant d'avoir coulé les fondations. Les méthodes classiques suivent cette logique : chaque étape doit être complètement terminée avant de passer à la suivante.</p>
+                    
+                    <p><strong>Principe de validation :</strong> Chaque phase produit des livrables qui doivent être validés avant de passer à la phase suivante. Cette approche garantit la traçabilité et la conformité.</p>
+                    
+                    <div class="alert alert-success">
+                        <strong>✅ Réhabilitation :</strong> Ces méthodes ne sont pas obsolètes ! Elles excellent dans certains contextes et restent largement utilisées dans l'industrie.
+                    </div>
+                </div>
+            </div>
+
+            <div class="dropdown" data-target="modele-cascade">
+                <h3 class="dropdown-title">🌊 Modèle Cascade - Analyse approfondie</h3>
+                <div class="dropdown-content" id="modele-cascade">
+                    <p><strong>Structure détaillée du modèle Cascade :</strong></p>
+                    
+                    <div class="cards-grid">
+                        <div class="card card-primary">
+                            <h4>1️⃣ Phase d'Expression des besoins</h4>
+                            <ul>
+                                <li><strong>Durée :</strong> 10-15% du projet</li>
+                                <li><strong>Livrables :</strong> Cahier des charges fonctionnel</li>
+                                <li><strong>Acteurs :</strong> Utilisateurs, analystes métier</li>
+                                <li><strong>Validation :</strong> Comité de pilotage</li>
+                                <li><strong>Critères qualité :</strong> Complétude, cohérence, faisabilité</li>
+                            </ul>
+                        </div>
+                        <div class="card card-secondary">
+                            <h4>2️⃣ Phase d'Analyse et Conception</h4>
+                            <ul>
+                                <li><strong>Durée :</strong> 20-25% du projet</li>
+                                <li><strong>Livrables :</strong> Spécifications techniques, architecture</li>
+                                <li><strong>Acteurs :</strong> Architectes, concepteurs</li>
+                                <li><strong>Validation :</strong> Revue technique</li>
+                                <li><strong>Critères qualité :</strong> Conformité aux besoins, performance</li>
+                            </ul>
+                        </div>
+                        <div class="card card-accent">
+                            <h4>3️⃣ Phase de Développement</h4>
+                            <ul>
+                                <li><strong>Durée :</strong> 40-50% du projet</li>
+                                <li><strong>Livrables :</strong> Code source, documentation technique</li>
+                                <li><strong>Acteurs :</strong> Développeurs, intégrateurs</li>
+                                <li><strong>Validation :</strong> Tests unitaires et d'intégration</li>
+                                <li><strong>Critères qualité :</strong> Respect des spécifications</li>
+                            </ul>
+                        </div>
+                        <div class="card card-gradient">
+                            <h4>4️⃣ Phase de Tests et Déploiement</h4>
+                            <ul>
+                                <li><strong>Durée :</strong> 15-20% du projet</li>
+                                <li><strong>Livrables :</strong> Système testé, documentation utilisateur</li>
+                                <li><strong>Acteurs :</strong> Testeurs, utilisateurs pilotes</li>
+                                <li><strong>Validation :</strong> Recette utilisateur</li>
+                                <li><strong>Critères qualité :</strong> Conformité fonctionnelle</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="alert alert-info">
+                        <strong>💡 Points de contrôle :</strong> Entre chaque phase, un jallon (milestone) permet de valider les livrables avant de passer à la phase suivante. C'est le principe de "porte de sortie" (gate).
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quiz 2 : Waterfall -->
+            <div class="quiz-container">
+                <h3 class="quiz-title">📝 Quiz 2 : Modèle Cascade</h3>
+                <p class="quiz-description">Évaluez votre compréhension du modèle Cascade (Waterfall)</p>
+
+                <div id="quiz2-question" class="quiz-question">
+                    <p id="quiz2-question-text" class="question-text"></p>
+                    <div id="quiz2-answers" class="quiz-answers"></div>
+                    <button id="quiz2-submit" class="quiz-btn" disabled>Valider la réponse</button>
+                </div>
+
+                <div id="quiz2-result" class="quiz-result" style="display:none;">
+                    <div id="quiz2-explanation" class="explanation"></div>
+                    <button id="quiz2-next" class="quiz-btn">Question suivante</button>
+                </div>
+
+                <div class="quiz-footer">
+                    <span id="quiz2-progress">Question 1/5</span>
+                    <span id="quiz2-score">Score: 0/0</span>
+                </div>
+            </div>
+
+            <div class="dropdown" data-target="cycle-v">
+                <h3 class="dropdown-title">📐 Cycle en V - Approche par la qualité</h3>
+                <div class="dropdown-content" id="cycle-v">
+                    <p><strong>Evolution du modèle Cascade :</strong> Le Cycle en V améliore le modèle Cascade en associant chaque phase de conception à une phase de test correspondante.</p>
+                    
+                    <div class="cards-grid">
+                        <div class="card card-primary">
+                            <h4>⬇️ Branche descendante</h4>
+                            <ul>
+                                <li><strong>Expression des besoins</strong> → Tests d'acceptation</li>
+                                <li><strong>Spécifications fonctionnelles</strong> → Tests fonctionnels</li>
+                                <li><strong>Conception architecturale</strong> → Tests d'intégration</li>
+                                <li><strong>Conception détaillée</strong> → Tests unitaires</li>
+                            </ul>
+                        </div>
+                        <div class="card card-secondary">
+                            <h4>⬆️ Branche montante</h4>
+                            <ul>
+                                <li><strong>Tests unitaires</strong> : Vérification du code</li>
+                                <li><strong>Tests d'intégration</strong> : Assemblage des modules</li>
+                                <li><strong>Tests fonctionnels</strong> : Validation des fonctionnalités</li>
+                                <li><strong>Tests d'acceptation</strong> : Validation utilisateur</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <p><strong>Avantages spécifiques :</strong></p>
+                    <ul>
+                        <li><strong>Traçabilité :</strong> Chaque exigence est liée à un test</li>
+                        <li><strong>Qualité :</strong> Détection précoce des défauts</li>
+                        <li><strong>Rigueur :</strong> Approche structurée</li>
+                        <li><strong>Documentation :</strong> Plans de tests définis en amont</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card card-primary">
+                    <h4>💪 Forces des méthodes classiques</h4>
+                    <ul>
+                        <li><strong>Prévisibilité :</strong> Planning et budget fiables</li>
+                        <li><strong>Documentation :</strong> Traçabilité complète</li>
+                        <li><strong>Conformité :</strong> Respect des normes</li>
+                        <li><strong>Contrôle :</strong> Validation à chaque étape</li>
+                        <li><strong>Responsabilités :</strong> Rôles clairement définis</li>
+                        <li><strong>Gouvernance :</strong> Processus de décision formalisé</li>
+                    </ul>
+                </div>
+
+                <div class="card card-secondary">
+                    <h4>⚠️ Limites et contraintes</h4>
+                    <ul>
+                        <li><strong>Rigidité :</strong> Changements difficiles et coûteux</li>
+                        <li><strong>Feedback tardif :</strong> Validation en fin de cycle</li>
+                        <li><strong>Effet tunnel :</strong> Visibilité limitée en cours de projet</li>
+                        <li><strong>Hypothèses :</strong> Basé sur des exigences supposées stables</li>
+                        <li><strong>Innovation :</strong> Peu adapté aux projets exploratoires</li>
+                        <li><strong>Motivation :</strong> Cycles longs sans livraisons</li>
+                    </ul>
+                </div>
+
+                <div class="card card-accent">
+                    <h4>🎯 Contextes d'excellence</h4>
+                    <ul>
+                        <li><strong>Systèmes critiques :</strong> Aéronautique, médical, nucléaire</li>
+                        <li><strong>Contraintes réglementaires :</strong> Banque, assurance</li>
+                        <li><strong>Exigences stables :</strong> Cahier des charges figé</li>
+                        <li><strong>Projets complexes :</strong> Infrastructure, ERP</li>
+                        <li><strong>Équipes distribuées :</strong> Coordination par documentation</li>
+                        <li><strong>Budgets fixes :</strong> Engagement contractuel ferme</li>
+                    </ul>
+                </div>
+
+                <div class="card card-gradient">
+                    <h4>📊 Métriques de suivi</h4>
+                    <ul>
+                        <li><strong>Avancement :</strong> % de tâches terminées</li>
+                        <li><strong>Qualité :</strong> Nombre de défauts par phase</li>
+                        <li><strong>Performance :</strong> Respect des jalons</li>
+                        <li><strong>Coût :</strong> Budget consommé vs prévu</li>
+                        <li><strong>Risques :</strong> Criticité et probabilité</li>
+                        <li><strong>Changements :</strong> Demandes de modification</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="alert alert-warning">
+                <strong>🎯 Analyse pour étude de faisabilité :</strong> Les méthodes classiques sont recommandées quand l'étude de faisabilité révèle des exigences stables, des contraintes réglementaires strictes, ou une complexité technique nécessitant une approche structurée.
+            </div>
+
+            <!-- Quiz 3 : Cycle en V -->
+            <div class="quiz-container">
+                <h3 class="quiz-title">📝 Quiz 3 : Cycle en V</h3>
+                <p class="quiz-description">Testez vos connaissances sur le modèle en Cycle en V</p>
+
+                <div id="quiz3-question" class="quiz-question">
+                    <p id="quiz3-question-text" class="question-text"></p>
+                    <div id="quiz3-answers" class="quiz-answers"></div>
+                    <button id="quiz3-submit" class="quiz-btn" disabled>Valider la réponse</button>
+                </div>
+
+                <div id="quiz3-result" class="quiz-result" style="display:none;">
+                    <div id="quiz3-explanation" class="explanation"></div>
+                    <button id="quiz3-next" class="quiz-btn">Question suivante</button>
+                </div>
+
+                <div class="quiz-footer">
+                    <span id="quiz3-progress">Question 1/5</span>
+                    <span id="quiz3-score">Score: 0/0</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Révolution Agile -->
+        <section id="agile" class="section">
+            <h2 class="section-title">La Révolution Agile : Mindset et Transformation</h2>
+            
+            <div class="dropdown" data-target="agile-histoire">
+                <h3 class="dropdown-title">📜 Histoire et contexte d'émergence</h3>
+                <div class="dropdown-content" id="agile-histoire">
+                    <p><strong>Contexte d'émergence :</strong> Face aux échecs répétés des projets informatiques dans les années 1990 (selon le rapport Standish Group, seulement 16% des projets étaient considérés comme réussis), 17 experts se réunissent en février 2001 à Snowbird, Utah.</p>
+                    
+                    <p><strong>Manifeste Agile (2001) :</strong> Ce document révolutionnaire propose une alternative aux méthodes lourdes en privilégiant :</p>
+                    <ul>
+                        <li><strong>Les individus et interactions</strong> plutôt que les processus et outils</li>
+                        <li><strong>Le logiciel fonctionnel</strong> plutôt que la documentation exhaustive</li>
+                        <li><strong>La collaboration client</strong> plutôt que la négociation contractuelle</li>
+                        <li><strong>L'adaptation au changement</strong> plutôt que le suivi d'un plan</li>
+                    </ul>
+                    
+                    <p><strong>Évolution industrielle :</strong> L'agilité répond aux besoins d'un monde en accélération constante, où l'innovation et la réactivité deviennent des avantages concurrentiels décisifs.</p>
+                </div>
+            </div>
+
+            <div class="dropdown" data-target="principes-agiles">
+                <h3 class="dropdown-title">🔥 Les 12 Principes Agiles</h3>
+                <div class="dropdown-content" id="principes-agiles">
+                    <div class="cards-grid">
+                        <div class="card card-primary">
+                            <h4>🎯 Satisfaction Client</h4>
+                            <ul>
+                                <li><strong>1.</strong> Satisfaire le client par des livraisons rapides et continues</li>
+                                <li><strong>2.</strong> Accueillir favorablement les changements d'exigences</li>
+                                <li><strong>7.</strong> Un logiciel fonctionnel est la mesure principale d'avancement</li>
+                            </ul>
+                        </div>
+                        <div class="card card-secondary">
+                            <h4>🚀 Livraisons Fréquentes</h4>
+                            <ul>
+                                <li><strong>3.</strong> Livrer fréquemment un logiciel fonctionnel (quelques semaines)</li>
+                                <li><strong>8.</strong> Rythme de développement durable</li>
+                                <li><strong>12.</strong> Réflexion régulière pour devenir plus efficace</li>
+                            </ul>
+                        </div>
+                        <div class="card card-accent">
+                            <h4>👥 Collaboration</h4>
+                            <ul>
+                                <li><strong>4.</strong> Développeurs et gens d'affaires travaillent ensemble</li>
+                                <li><strong>5.</strong> Équipes motivées avec l'environnement et soutien nécessaires</li>
+                                <li><strong>6.</strong> Conversation face à face comme méthode de communication</li>
+                            </ul>
+                        </div>
+                        <div class="card card-gradient">
+                            <h4>⚡ Excellence Technique</h4>
+                            <ul>
+                                <li><strong>9.</strong> Attention continue à l'excellence technique</li>
+                                <li><strong>10.</strong> Simplicité - maximiser la quantité de travail non fait</li>
+                                <li><strong>11.</strong> Équipes auto-organisées produisent les meilleures solutions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dropdown" data-target="frameworks-agiles">
+                <h3 class="dropdown-title">🛠️ Frameworks Agiles Populaires</h3>
+                <div class="dropdown-content" id="frameworks-agiles">
+                    <div class="cards-grid">
+                        <div class="card card-primary">
+                            <h4>🔄 Scrum</h4>
+                            <ul>
+                                <li><strong>Usage :</strong> 87% des équipes agiles</li>
+                                <li><strong>Focus :</strong> Gestion de produit</li>
+                                <li><strong>Sprints :</strong> 2-4 semaines</li>
+                                <li><strong>Rôles :</strong> 3 rôles définis</li>
+                                <li><strong>Événements :</strong> 5 cérémonies</li>
+                                <li><strong>Artefacts :</strong> 3 éléments principaux</li>
+                            </ul>
+                        </div>
+                        <div class="card card-secondary">
+                            <h4>🎯 Kanban</h4>
+                            <ul>
+                                <li><strong>Principe :</strong> Flux continu</li>
+                                <li><strong>Visualisation :</strong> Tableau Kanban</li>
+                                <li><strong>WIP :</strong> Limitation du travail en cours</li>
+                                <li><strong>Amélioration :</strong> Continue</li>
+                                <li><strong>Changements :</strong> Évolutifs</li>
+                                <li><strong>Métrique :</strong> Lead time et cycle time</li>
+                            </ul>
+                        </div>
+                        <div class="card card-accent">
+                            <h4>⚡ Extreme Programming (XP)</h4>
+                            <ul>
+                                <li><strong>Focus :</strong> Pratiques de développement</li>
+                                <li><strong>Tests :</strong> Test-Driven Development</li>
+                                <li><strong>Code :</strong> Pair programming</li>
+                                <li><strong>Intégration :</strong> Continue</li>
+                                <li><strong>Refactoring :</strong> Amélioration constante</li>
+                                <li><strong>Planification :</strong> Planning game</li>
+                            </ul>
+                        </div>
+                        <div class="card card-gradient">
+                            <h4>🏢 SAFe (Scaled Agile)</h4>
+                            <ul>
+                                <li><strong>Échelle :</strong> Grandes organisations</li>
+                                <li><strong>Niveaux :</strong> Team, Program, Portfolio</li>
+                                <li><strong>PI :</strong> Program Increment (8-12 semaines)</li>
+                                <li><strong>Synchronisation :</strong> Trains d'équipes</li>
+                                <li><strong>Gouvernance :</strong> Lean-Agile</li>
+                                <li><strong>Métriques :</strong> Business value delivery</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card card-primary">
+                    <h4>🌟 Avantages de l'approche Agile</h4>
+                    <ul>
+                        <li><strong>Adaptabilité :</strong> Réaction rapide aux changements</li>
+                        <li><strong>Feedback :</strong> Validation continue par les utilisateurs</li>
+                        <li><strong>Motivation :</strong> Équipes autonomes et responsabilisées</li>
+                        <li><strong>ROI :</strong> Valeur livrée rapidement</li>
+                        <li><strong>Qualité :</strong> Tests et amélioration continus</li>
+                        <li><strong>Apprentissage :</strong> Expérimentation et innovation</li>
+                        <li><strong>Transparence :</strong> Visibilité permanente</li>
+                    </ul>
+                </div>
+
+                <div class="card card-accent">
+                    <h4>⚠️ Défis et conditions d'échec</h4>
+                    <ul>
+                        <li><strong>Culture organisationnelle :</strong> Résistance au changement</li>
+                        <li><strong>Disponibilité client :</strong> Participation insuffisante</li>
+                        <li><strong>Compétences équipe :</strong> Maturité technique requise</li>
+                        <li><strong>Management :</strong> Passage du contrôle au support</li>
+                        <li><strong>Contraintes réglementaires :</strong> Documentation obligatoire</li>
+                        <li><strong>Géographie :</strong> Équipes dispersées</li>
+                        <li><strong>Complexité :</strong> Systèmes avec dépendances fortes</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="alert alert-info">
+                <strong>🎯 Impact sur l'étude de faisabilité :</strong> L'adoption de l'agilité doit être évaluée dès l'étude de faisabilité en analysant la maturité organisationnelle, la disponibilité du client, et la nature des exigences (évolutives vs stables).
+            </div>
+
+            <!-- Quiz 4 : Agile -->
+            <div class="quiz-container">
+                <h3 class="quiz-title">📝 Quiz 4 : Révolution Agile</h3>
+                <p class="quiz-description">Vérifiez vos connaissances sur le Manifeste Agile et ses principes</p>
+
+                <div id="quiz4-question" class="quiz-question">
+                    <p id="quiz4-question-text" class="question-text"></p>
+                    <div id="quiz4-answers" class="quiz-answers"></div>
+                    <button id="quiz4-submit" class="quiz-btn" disabled>Valider la réponse</button>
+                </div>
+
+                <div id="quiz4-result" class="quiz-result" style="display:none;">
+                    <div id="quiz4-explanation" class="explanation"></div>
+                    <button id="quiz4-next" class="quiz-btn">Question suivante</button>
+                </div>
+
+                <div class="quiz-footer">
+                    <span id="quiz4-progress">Question 1/5</span>
+                    <span id="quiz4-score">Score: 0/0</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Scrum -->
+        <section id="scrum" class="section">
+            <h2 class="section-title">Scrum : Framework Agile de Référence</h2>
+            
+            <div class="dropdown" data-target="scrum-introduction">
+                <h3 class="dropdown-title">🏉 Introduction et Philosophie Scrum</h3>
+                <div class="dropdown-content" id="scrum-introduction">
+                    <p><strong>Origine du nom :</strong> "Scrum" vient du rugby et désigne une mêlée où l'équipe travaille ensemble pour faire avancer le ballon. Cette métaphore illustre parfaitement l'esprit collaboratif du framework.</p>
+                    
+                    <p><strong>Créateurs :</strong> Jeff Sutherland et Ken Schwaber ont développé Scrum dans les années 1990, en s'inspirant des travaux de Hirotaka Takeuchi et Ikujiro Nonaka sur le développement de produits.</p>
+                    
+                    <p><strong>Philosophie :</strong> Scrum repose sur l'empirisme : transparence, inspection et adaptation. C'est un framework léger qui ne prescrit pas comment faire les choses, mais structure le "quoi" et le "quand".</p>
+                    
+                    <div class="alert alert-success">
+                        <strong>✨ Caractéristiques clés :</strong> Scrum est volontairement incomplet. Il définit seulement les éléments nécessaires pour commencer, permettant aux équipes de découvrir ce qui fonctionne pour elles.
+                    </div>
+                </div>
+            </div>
+
+            <div class="dropdown" data-target="roles-scrum">
+                <h3 class="dropdown-title">👥 Les Rôles Scrum</h3>
+                <div class="dropdown-content" id="roles-scrum">
+                    <div class="cards-grid">
+                        <div class="card card-primary">
+                            <h4>🎯 Product Owner</h4>
+                            <ul>
+                                <li><strong>Responsabilité :</strong> Maximiser la valeur du produit</li>
+                                <li><strong>Product Backlog :</strong> Création, priorisation, communication</li>
+                                <li><strong>Vision :</strong> Définir et communiquer la vision produit</li>
+                                <li><strong>Stakeholders :</strong> Interface avec les parties prenantes</li>
+                                <li><strong>Acceptation :</strong> Valider les incréments de produit</li>
+                                <li><strong>ROI :</strong> Optimiser le retour sur investissement</li>
+                                <li><strong>Disponibilité :</strong> Accessible à l'équipe de développement</li>
+                            </ul>
+                        </div>
+                        <div class="card card-secondary">
+                            <h4>⚙️ Équipe de Développement</h4>
+                            <ul>
+                                <li><strong>Responsabilité :</strong> Livrer l'incrément de produit</li>
+                                <li><strong>Auto-organisation :</strong> Décide comment atteindre l'objectif</li>
+                                <li><strong>Pluridisciplinaire :</strong> Toutes compétences pour livrer</li>
+                                <li><strong>Taille :</strong> 3 à 9 personnes (idéalement 7±2)</li>
+                                <li><strong>Engagement :</strong> S'engage sur l'objectif du Sprint</li>
+                                <li><strong>Qualité :</strong> Maintient les standards techniques</li>
+                                <li><strong>Amélioration :</strong> Continue des pratiques</li>
+                            </ul>
+                        </div>
+                        <div class="card card-accent">
+                            <h4>🛡️ Scrum Master</h4>
+                            <ul>
+                                <li><strong>Servant Leadership :</strong> Leader au service de l'équipe</li>
+                                <li><strong>Facilitation :</strong> Anime les événements Scrum</li>
+                                <li><strong>Obstacles :</strong> Supprime les impediments</li>
+                                <li><strong>Coaching :</strong> Aide l'équipe à s'améliorer</li>
+                                <li><strong>Protection :</strong> Protège l'équipe des interruptions</li>
+                                <li><strong>Formation :</strong> Enseigne Scrum à l'organisation</li>
+                                <li><strong>Changement :</strong> Agent de transformation agile</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="alert alert-warning">
+                        <strong>⚠️ Anti-patterns courants :</strong>
+                        <ul>
+                            <li>Product Owner qui délègue ses responsabilités</li>
+                            <li>Scrum Master qui devient chef de projet</li>
+                            <li>Équipe qui attend les instructions plutôt que de s'auto-organiser</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dropdown" data-target="evenements-scrum">
+                <h3 class="dropdown-title">📅 Les Événements Scrum</h3>
+                <div class="dropdown-content" id="evenements-scrum">
+                    <div class="cards-grid">
+                        <div class="card card-primary">
+                            <h4>🏁 Sprint</h4>
+                            <ul>
+                                <li><strong>Durée :</strong> 2-4 semaines maximum</li>
+                                <li><strong>Objectif :</strong> Livrer un incrément de produit</li>
+                                <li><strong>Contenu :</strong> Ensemble d'éléments du Product Backlog</li>
+                                <li><strong>Engagement :</strong> Pas de changement de périmètre</li>
+                                <li><strong>Qualité :</strong> Standards maintenus</li>
+                                <li><strong>Annulation :</strong> Seul le PO peut annuler</li>
+                            </ul>
+                        </div>
+                        <div class="card card-secondary">
+                            <h4>🎯 Sprint Planning</h4>
+                            <ul>
+                                <li><strong>Durée :</strong> 8h max pour un Sprint de 4 semaines</li>
+                                <li><strong>Partie 1 :</strong> QUOI - Sélection des éléments</li>
+                                <li><strong>Partie 2 :</strong> COMMENT - Plan pour les réaliser</li>
+                                <li><strong>Résultat :</strong> Objectif de Sprint et Sprint Backlog</li>
+                                <li><strong>Participants :</strong> Toute l'équipe Scrum</li>
+                                <li><strong>Input :</strong> Product Backlog ordonné</li>
+                            </ul>
+                        </div>
+                        <div class="card card-accent">
+                            <h4>🔄 Daily Scrum</h4>
+                            <ul>
+                                <li><strong>Durée :</strong> 15 minutes maximum</li>
+                                <li><strong>Fréquence :</strong> Chaque jour ouvré</li>
+                                <li><strong>Participants :</strong> Équipe de développement</li>
+                                <li><strong>3 Questions :</strong> Fait hier, plan aujourd'hui, obstacles</li>
+                                <li><strong>Objectif :</strong> Synchronisation et planification</li>
+                                <li><strong>Format :</strong> Équipe décide de la structure</li>
+                            </ul>
+                        </div>
+                        <div class="card card-gradient">
+                            <h4>📊 Sprint Review</h4>
+                            <ul>
+                                <li><strong>Durée :</strong> 4h max pour un Sprint de 4 semaines</li>
+                                <li><strong>Objectif :</strong> Inspecter l'incrément et adapter le Product Backlog</li>
+                                <li><strong>Démonstration :</strong> Ce qui a été fait</li>
+                                <li><strong>Feedback :</strong> Collecte et discussion</li>
+                                <li><strong>Adaptation :</strong> Mise à jour du Product Backlog</li>
+                                <li><strong>Participants :</strong> Équipe Scrum + stakeholders</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="card card-primary">
+                        <h4>🔍 Sprint Retrospective</h4>
+                        <ul>
+                            <li><strong>Durée :</strong> 3h max pour un Sprint de 4 semaines</li>
+                            <li><strong>Objectif :</strong> Amélioration continue de l'équipe</li>
+                            <li><strong>Inspection :</strong> Comment s'est passé le Sprint</li>
+                            <li><strong>Adaptation :</strong> Plan d'amélioration pour le prochain Sprint</li>
+                            <li><strong>Participants :</strong> Équipe Scrum uniquement</li>
+                            <li><strong>Techniques :</strong> Start/Stop/Continue, Mad/Sad/Glad, etc.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dropdown" data-target="artefacts-scrum">
+                <h3 class="dropdown-title">📋 Les Artefacts Scrum</h3>
+                <div class="dropdown-content" id="artefacts-scrum">
+                    <div class="cards-grid">
+                        <div class="card card-primary">
+                            <h4>📝 Product Backlog</h4>
+                            <ul>
+                                <li><strong>Définition :</strong> Liste ordonnée de fonctionnalités</li>
+                                <li><strong>Propriétaire :</strong> Product Owner</li>
+                                <li><strong>Évolution :</strong> Constante (Product Backlog Refinement)</li>
+                                <li><strong>Critères :</strong> Priorisé par valeur métier</li>
+                                <li><strong>Format :</strong> User Stories ou autre</li>
+                                <li><strong>Transparence :</strong> Accessible à tous</li>
+                                <li><strong>DOD :</strong> Critères d'acceptation définis</li>
+                            </ul>
+                        </div>
+                        <div class="card card-secondary">
+                            <h4>🎯 Sprint Backlog</h4>
+                            <ul>
+                                <li><strong>Composition :</strong> Éléments sélectionnés + plan</li>
+                                <li><strong>Propriétaire :</strong> Équipe de développement</li>
+                                <li><strong>Visibilité :</strong> Mise à jour quotidienne</li>
+                                <li><strong>Engagement :</strong> Vers l'objectif de Sprint</li>
+                                <li><strong>Flexibilité :</strong> Adaptation du plan possible</li>
+                                <li><strong>Suivi :</strong> Burndown chart (optionnel)</li>
+                            </ul>
+                        </div>
+                        <div class="card card-accent">
+                            <h4>🚀 Incrément</h4>
+                            <ul>
+                                <li><strong>Définition :</strong> Somme de tous les éléments terminés</li>
+                                <li><strong>Qualité :</strong> Respecte la Definition of Done</li>
+                                <li><strong>Utilisabilité :</strong> Potentiellement livrable</li>
+                                <li><strong>Cumul :</strong> Incrément précédent + nouveau</li>
+                                <li><strong>Validation :</strong> Product Owner accepte ou refuse</li>
+                                <li><strong>Valeur :</strong> Apporte de la valeur utilisateur</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="alert alert-info">
+                        <strong>💡 Definition of Done :</strong> Engagement partagé sur ce que signifie "terminé" pour un élément du Product Backlog. Plus elle est stricte, plus la qualité est assurée.
+                    </div>
+                </div>
+            </div>
+
+            <div class="dropdown" data-target="metriques-scrum">
+                <h3 class="dropdown-title">📊 Métriques et Indicateurs Scrum</h3>
+                <div class="dropdown-content" id="metriques-scrum">
+                    <div class="cards-grid">
+                        <div class="card card-primary">
+                            <h4>⚡ Métriques de Performance</h4>
+                            <ul>
+                                <li><strong>Vélocité :</strong> Points complétés par Sprint</li>
+                                <li><strong>Burndown Chart :</strong> Travail restant dans le Sprint</li>
+                                <li><strong>Burnup Chart :</strong> Travail complété vs scope</li>
+                                <li><strong>Lead Time :</strong> Temps de la demande à la livraison</li>
+                                <li><strong>Cycle Time :</strong> Temps de développement effectif</li>
+                                <li><strong>Throughput :</strong> Nombre d'éléments livrés par période</li>
+                            </ul>
+                        </div>
+                        <div class="card card-secondary">
+                            <h4>🎯 Métriques de Qualité</h4>
+                            <ul>
+                                <li><strong>Défauts en production :</strong> Bugs post-livraison</li>
+                                <li><strong>Couverture de tests :</strong> % de code testé</li>
+                                <li><strong>Dette technique :</strong> Effort de refactoring</li>
+                                <li><strong>Temps de résolution :</strong> Bugs corrigés</li>
+                                <li><strong>Satisfaction client :</strong> NPS ou enquêtes</li>
+                                <li><strong>Réussite des démos :</strong> % de fonctionnalités acceptées</li>
+                            </ul>
+                        </div>
+                        <div class="card card-accent">
+                            <h4>👥 Métriques d'Équipe</h4>
+                            <ul>
+                                <li><strong>Bonheur de l'équipe :</strong> Moral et satisfaction</li>
+                                <li><strong>Amélioration continue :</strong> Actions de retrospective</li>
+                                <li><strong>Formation :</strong> Heures d'apprentissage</li>
+                                <li><strong>Collaboration :</strong> Interactions inter-équipes</li>
+                                <li><strong>Innovation :</strong> Temps dédié aux expérimentations</li>
+                                <li><strong>Turnover :</strong> Stabilité de l'équipe</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert alert-success">
+                <strong>🎯 Choix dans l'étude de faisabilité :</strong> Scrum est recommandé quand l'étude révèle des besoins d'adaptation fréquente, une forte implication utilisateur possible, et une équipe mature techniquement.
+            </div>
+
+            <!-- Quiz 5 : Scrum -->
+            <div class="quiz-container">
+                <h3 class="quiz-title">📝 Quiz 5 : Framework Scrum</h3>
+                <p class="quiz-description">Évaluez votre maîtrise du framework Scrum</p>
+
+                <div id="quiz5-question" class="quiz-question">
+                    <p id="quiz5-question-text" class="question-text"></p>
+                    <div id="quiz5-answers" class="quiz-answers"></div>
+                    <button id="quiz5-submit" class="quiz-btn" disabled>Valider la réponse</button>
+                </div>
+
+                <div id="quiz5-result" class="quiz-result" style="display:none;">
+                    <div id="quiz5-explanation" class="explanation"></div>
+                    <button id="quiz5-next" class="quiz-btn">Question suivante</button>
+                </div>
+
+                <div class="quiz-footer">
+                    <span id="quiz5-progress">Question 1/5</span>
+                    <span id="quiz5-score">Score: 0/0</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Choix Méthodologique -->
+        <section id="choix" class="section">
+            <h2 class="section-title">Choix Méthodologique : Analyse et Décision</h2>
+            
+            <div class="dropdown" data-target="matrice-decision">
+                <h3 class="dropdown-title">📊 Matrice de Décision Méthodologique</h3>
+                <div class="dropdown-content" id="matrice-decision">
+                    <p><strong>Approche structurée :</strong> Le choix méthodologique ne doit jamais être laissé au hasard ou aux préférences personnelles. Il doit résulter d'une analyse objective du contexte projet.</p>
+                    
+                    <div class="cards-grid">
+                        <div class="card card-primary">
+                            <h4>🔍 Critères d'Analyse</h4>
+                            <ul>
+                                <li><strong>Stabilité des exigences :</strong> Figées vs évolutives</li>
+                                <li><strong>Complexité technique :</strong> Connue vs innovante</li>
+                                <li><strong>Contraintes réglementaires :</strong> Strictes vs flexibles</li>
+                                <li><strong>Taille du projet :</strong> Petite équipe vs grande organisation</li>
+                                <li><strong>Disponibilité client :</strong> Forte vs limitée</li>
+                                <li><strong>Culture organisationnelle :</strong> Hiérarchique vs collaborative</li>
+                                <li><strong>Expertise équipe :</strong> Junior vs senior</li>
+                                <li><strong>Contraintes temporelles :</strong> Time-to-market vs planification</li>
+                            </ul>
+                        </div>
+                        <div class="card card-secondary">
+                            <h4>⚖️ Grille de Scoring</h4>
+                            <ul>
+                                <li><strong>Exigences stables :</strong> +3 Cascade, -2 Agile</li>
+                                <li><strong>Exigences évolutives :</strong> -3 Cascade, +3 Agile</li>
+                                <li><strong>Réglementation stricte :</strong> +2 Cascade, -1 Agile</li>
+                                <li><strong>Innovation requise :</strong> -2 Cascade, +2 Agile</li>
+                                <li><strong>Client disponible :</strong> -1 Cascade, +2 Agile</li>
+                                <li><strong>Équipe experte :</strong> +1 Cascade, +2 Agile</li>
+                                <li><strong>Time-to-market :</strong> -2 Cascade, +3 Agile</li>
+                                <li><strong>Budget fixe :</strong> +2 Cascade, -1 Agile</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="alert alert-info">
+                        <strong>💡 Méthode de calcul :</strong> Additionnez les scores pour chaque approche. Un score positif favorise la méthodologie, un score négatif la défavorise. Analysez ensuite les critères les plus importants pour votre contexte.
+                    </div>
+                </div>
+            </div>
+
+            <div class="dropdown" data-target="scenarios-type">
+                <h3 class="dropdown-title">🎭 Scénarios Types et Recommandations</h3>
+                <div class="dropdown-content" id="scenarios-type">
+                    <div class="cards-grid">
+                        <div class="card card-primary">
+                            <h4>🏦 Projet Bancaire</h4>
+                            <ul>
+                                <li><strong>Contexte :</strong> Système de paiement sécurisé</li>
+                                <li><strong>Exigences :</strong> Stables, réglementées</li>
+                                <li><strong>Contraintes :</strong> Sécurité, conformité</li>
+                                <li><strong>Recommandation :</strong> Cycle en V</li>
+                                <li><strong>Justification :</strong> Traçabilité et documentation exigées</li>
+                                <li><strong>Risques :</strong> Non-conformité réglementaire</li>
+                            </ul>
+                        </div>
+                        <div class="card card-secondary">
+                            <h4>📱 Application Mobile</h4>
+                            <ul>
+                                <li><strong>Contexte :</strong> App e-commerce innovante</li>
+                                <li><strong>Exigences :</strong> Évolutives, UX centrale</li>
+                                <li><strong>Contraintes :</strong> Time-to-market, feedback utilisateur</li>
+                                <li><strong>Recommandation :</strong> Scrum</li>
+                                <li><strong>Justification :</strong> Adaptation rapide aux retours</li>
+                                <li><strong>Risques :</strong> Dérive du scope</li>
+                            </ul>
+                        </div>
+                        <div class="card card-accent">
+                            <h4>🏭 Système Industriel</h4>
+                            <ul>
+                                <li><strong>Contexte :</strong> Contrôle de production</li>
+                                <li><strong>Exigences :</strong> Critiques, stables</li>
+                                <li><strong>Contraintes :</strong> Sécurité, fiabilité</li>
+                                <li><strong>Recommandation :</strong> Cascade</li>
+                                <li><strong>Justification :</strong> Validation rigoureuse requise</li>
+                                <li><strong>Risques :</strong> Défaillance système critique</li>
+                            </ul>
+                        </div>
+                        <div class="card card-gradient">
+                            <h4>🚀 Startup Tech</h4>
+                            <ul>
+                                <li><strong>Contexte :</strong> Produit MVP innovant</li>
+                                <li><strong>Exigences :</strong> Incertaines, pivot possible</li>
+                                <li><strong>Contraintes :</strong> Budget limité, rapidité</li>
+                                <li><strong>Recommandation :</strong> Lean Startup + Scrum</li>
+                                <li><strong>Justification :</strong> Expérimentation rapide</li>
+                                <li><strong>Risques :</strong> Manque de structure</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dropdown" data-target="approches-hybrides">
+                <h3 class="dropdown-title">🔄 Approches Hybrides et Adaptations</h3>
+                <div class="dropdown-content" id="approches-hybrides">
+                    <p><strong>Réalité du terrain :</strong> De nombreux projets bénéficient d'approches hybrides qui combinent les avantages de différentes méthodologies selon les phases ou composants.</p>
+                    
+                    <div class="cards-grid">
+                        <div class="card card-primary">
+                            <h4>🏗️ Hybride par Phase</h4>
+                            <ul>
+                                <li><strong>Phase 1 :</strong> Cascade pour l'architecture globale</li>
+                                <li><strong>Phase 2 :</strong> Agile pour le développement fonctionnel</li>
+                                <li><strong>Phase 3 :</strong> Cascade pour l'intégration et tests</li>
+                                <li><strong>Avantage :</strong> Stabilité + flexibilité</li>
+                                <li><strong>Exemple :</strong> Projet ERP avec modules spécifiques</li>
+                            </ul>
+                        </div>
+                        <div class="card card-secondary">
+                            <h4>🧩 Hybride par Composant</h4>
+                            <ul>
+                                <li><strong>Backend :</strong> Cascade (architecture stable)</li>
+                                <li><strong>Frontend :</strong> Agile (UX évolutive)</li>
+                                <li><strong>API :</strong> Cascade (contrat figé)</li>
+                                <li><strong>Mobile :</strong> Agile (feedback utilisateur)</li>
+                                <li><strong>Exemple :</strong> Plateforme e-commerce complexe</li>
+                            </ul>
+                        </div>
+                        <div class="card card-accent">
+                            <h4>⚡ Water-Scrum-Fall</h4>
+                            <ul>
+                                <li><strong>Début :</strong> Cascade (exigences, architecture)</li>
+                                <li><strong>Milieu :</strong> Scrum (développement itératif)</li>
+                                <li><strong>Fin :</strong> Cascade (tests, déploiement)</li>
+                                <li><strong>Usage :</strong> Grandes organisations</li>
+                                <li><strong>Risque :</strong> Perte des avantages de chaque méthode</li>
+                            </ul>
+                        </div>
+                        <div class="card card-gradient">
+                            <h4>🎯 Scrum à l'Échelle</h4>
+                            <ul>
+                                <li><strong>SAFe :</strong> Framework pour grandes organisations</li>
+                                <li><strong>LeSS :</strong> Large-Scale Scrum</li>
+                                <li><strong>Nexus :</strong> Multiple Scrum Teams</li>
+                                <li><strong>Spotify Model :</strong> Squads, Tribes, Guilds</li>
+                                <li><strong>Objectif :</strong> Agilité à grande échelle</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert alert-warning">
+                <strong>⚠️ Piège à éviter :</strong> L'approche hybride ne doit pas être un prétexte pour éviter de faire un choix. Elle doit être justifiée par des besoins spécifiques identifiés dans l'analyse.
+            </div>
+        </section>
+
+        <!-- Section Étude de Faisabilité -->
+        <section id="faisabilite" class="section">
+            <h2 class="section-title">Étude de Faisabilité et Choix Méthodologique</h2>
+            
+            <div class="dropdown" data-target="faisabilite-intro">
+                <h3 class="dropdown-title">🔍 Intégration de l'Analyse Méthodologique</h3>
+                <div class="dropdown-content" id="faisabilite-intro">
+                    <p><strong>Position stratégique :</strong> L'étude de faisabilité est le moment clé pour analyser et justifier le choix méthodologique. Cette décision impacte directement la faisabilité technique, économique et organisationnelle du projet.</p>
+                    
+                    <p><strong>Objectifs de l'analyse méthodologique :</strong></p>
+                    <ul>
+                        <li>Évaluer l'adéquation des méthodologies au contexte projet</li>
+                        <li>Identifier les risques liés au choix méthodologique</li>
+                        <li>Estimer l'impact sur les coûts, délais et qualité</li>
+                        <li>Analyser les prérequis organisationnels et humains</li>
+                        <li>Préparer l'argumentation pour le cahier des charges</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="dropdown" data-target="faisabilite-technique">
+                <h3 class="dropdown-title">⚙️ Faisabilité Technique et Méthodologique</h3>
+                <div class="dropdown-content" id="faisabilite-technique">
+                    <div class="cards-grid">
+                        <div class="card card-primary">
+                            <h4>🔧 Analyse de la Complexité Technique</h4>
+                            <ul>
+                                <li><strong>Technologies connues :</strong> Favorise Cascade</li>
+                                <li><strong>Innovation technologique :</strong> Orienté Agile</li>
+                                <li><strong>Intégrations multiples :</strong> Évaluer les dépendances</li>
+                                <li><strong>Performance critique :</strong> Tests rigoureux (Cycle en V)</li>
+                                <li><strong>Évolutivité requise :</strong> Architecture modulaire (Agile)</li>
+                                <li><strong>Legacy systems :</strong> Impact sur la méthodologie</li>
+                            </ul>
+                        </div>
+                        <div class="card card-secondary">
+                            <h4>👨‍💻 Compétences et Maturité Équipe</h4>
+                            <ul>
+                                <li><strong>Expérience méthodologique :</strong> Formation nécessaire ?</li>
+                                <li><strong>Maturité technique :</strong> Auto-organisation possible ?</li>
+                                <li><strong>Taille de l'équipe :</strong> Communication directe vs processus</li>
+                                <li><strong>Localisation :</strong> Équipes distribuées</li>
+                                <li><strong>Disponibilité :</strong> Temps partiel vs dédié</li>
+                                <li><strong>Turnover :</strong> Stabilité de l'équipe</li>
+                            </ul>
+                        </div>
+                        <div class="card card-accent">
+                            <h4>🛠️ Infrastructure et Outillage</h4>
+                            <ul>
+                                <li><strong>DevOps :</strong> CI/CD pour l'agilité</li>
+                                <li><strong>Tests automatisés :</strong> Réduction des cycles</li>
+                                <li><strong>Monitoring :</strong> Feedback de production</li>
+                                <li><strong>Collaboration :</strong> Outils de communication</li>
+                                <li><strong>Documentation :</strong> Wikis vs documents formels</li>
+                                <li><strong>Versionning :</strong> Gestion des changements</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dropdown" data-target="faisabilite-economique">
+                <h3 class="dropdown-title">💰 Faisabilité Économique et ROI</h3>
+                <div class="dropdown-content" id="faisabilite-economique">
+                    <div class="cards-grid">
+                        <div class="card card-primary">
+                            <h4>💵 Impact sur les Coûts</h4>
+                            <ul>
+                                <li><strong>Formation équipe :</strong> Coût de montée en compétences</li>
+                                <li><strong>Outillage :</strong> Licences et infrastructure</li>
+                                <li><strong>Coaching :</strong> Accompagnement externe</li>
+                                <li><strong>Refactoring :</strong> Dette technique en Agile</li>
+                                <li><strong>Documentation :</strong> Coût réduit en Agile</li>
+                                <li><strong>Tests :</strong> Automatisation vs manuels</li>
+                            </ul>
+                        </div>
+                        <div class="card card-secondary">
+                            <h4>⏱️ Time-to-Market</h4>
+                            <ul>
+                                <li><strong>Cascade :</strong> Livraison en fin de projet</li>
+                                <li><strong>Agile :</strong> Valeur dès les premières itérations</li>
+                                <li><strong>ROI précoce :</strong> Feedback utilisateur rapide</li>
+                                <li><strong>Pivot possible :</strong> Adaptation aux retours marché</li>
+                                <li><strong>Opportunités :</strong> Saisie rapide des occasions</li>
+                                <li><strong>Concurrence :</strong> Avantage compétitif</li>
+                            </ul>
+                        </div>
+                        <div class="card card-accent">
+                            <h4>📊 Analyse Risque/Bénéfice</h4>
+                            <ul>
+                                <li><strong>Risque méthodologique :</strong> Échec de l'adoption</li>
+                                <li><strong>Risque technique :</strong> Complexité sous-estimée</li>
+                                <li><strong>Risque organisationnel :</strong> Résistance au changement</li>
+                                <li><strong>Bénéfice qualité :</strong> Amélioration continue</li>
+                                <li><strong>Bénéfice équipe :</strong> Motivation et autonomie</li>
+                                <li><strong>Bénéfice client :</strong> Satisfaction et fidélisation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dropdown" data-target="faisabilite-organisationnelle">
+                <h3 class="dropdown-title">🏢 Faisabilité Organisationnelle</h3>
+                <div class="dropdown-content" id="faisabilite-organisationnelle">
+                    <div class="cards-grid">
+                        <div class="card card-primary">
+                            <h4>🎭 Culture d'Entreprise</h4>
+                            <ul>
+                                <li><strong>Hiérarchie :</strong> Verticale vs horizontale</li>
+                                <li><strong>Prise de décision :</strong> Centralisée vs distribuée</li>
+                                <li><strong>Innovation :</strong> Encouragée vs contrôlée</li>
+                                <li><strong>Erreur :</strong> Punitive vs apprenante</li>
+                                <li><strong>Transparence :</strong> Ouverture vs confidentialité</li>
+                                <li><strong>Changement :</strong> Résistance vs adaptation</li>
+                            </ul>
+                        </div>
+                        <div class="card card-secondary">
+                            <h4>🤝 Parties Prenantes</h4>
+                            <ul>
+                                <li><strong>Sponsor :</strong> Soutien et compréhension</li>
+                                <li><strong>Utilisateurs :</strong> Disponibilité pour feedback</li>
+                                <li><strong>Management :</strong> Evolution du style de leadership</li>
+                                <li><strong>Équipes :</strong> Adhésion et formation</li>
+                                <li><strong>Clients :</strong> Participation aux revues</li>
+                                <li><strong>Partenaires :</strong> Alignement méthodologique</li>
+                            </ul>
+                        </div>
+                        <div class="card card-accent">
+                            <h4>📋 Processus et Gouvernance</h4>
+                            <ul>
+                                <li><strong>Processus existants :</strong> Compatibilité</li>
+                                <li><strong>Audit et contrôle :</strong> Adaptation nécessaire</li>
+                                <li><strong>Reporting :</strong> Nouveaux indicateurs</li>
+                                <li><strong>Validation :</strong> Circuits de décision</li>
+                                <li><strong>Budget :</strong> Flexibilité vs rigidité</li>
+                                <li><strong>Contractuel :</strong> Clauses d'adaptation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dropdown" data-target="plan-transition">
+                <h3 class="dropdown-title">🚀 Plan de Transition Méthodologique</h3>
+                <div class="dropdown-content" id="plan-transition">
+                    <p><strong>Approche progressive :</strong> La transition vers une nouvelle méthodologie doit être planifiée et accompagnée pour maximiser les chances de succès.</p>
+                    
+                    <div class="cards-grid">
+                        <div class="card card-primary">
+                            <h4>📚 Phase de Préparation</h4>
+                            <ul>
+                                <li><strong>Évaluation de maturité :</strong> État des lieux actuel</li>
+                                <li><strong>Formation :</strong> Programme d'apprentissage</li>
+                                <li><strong>Sensibilisation :</strong> Communication sur les bénéfices</li>
+                                <li><strong>Outillage :</strong> Mise en place des outils</li>
+                                <li><strong>Coaching :</strong> Accompagnement externe</li>
+                                <li><strong>Pilote :</strong> Projet test pour expérimenter</li>
+                            </ul>
+                        </div>
+                        <div class="card card-secondary">
+                            <h4>🎯 Phase de Lancement</h4>
+                            <ul>
+                                <li><strong>Équipe dédiée :</strong> Champions de la méthodologie</li>
+                                <li><strong>Quick wins :</strong> Succès rapides et visibles</li>
+                                <li><strong>Métriques :</strong> Suivi de l'adoption</li>
+                                <li><strong>Ajustements :</strong> Adaptation au contexte</li>
+                                <li><strong>Communication :</strong> Partage des résultats</li>
+                                <li><strong>Support :</strong> Aide en temps réel</li>
+                            </ul>
+                        </div>
+                        <div class="card card-accent">
+                            <h4>🔄 Phase de Généralisation</h4>
+                            <ul>
+                                <li><strong>Déploiement :</strong> Extension à d'autres équipes</li>
+                                <li><strong>Standardisation :</strong> Pratiques communes</li>
+                                <li><strong>Amélioration :</strong> Retours d'expérience</li>
+                                <li><strong>Autonomie :</strong> Réduction de l'accompagnement</li>
+                                <li><strong>Évaluation :</strong> Mesure du ROI</li>
+                                <li><strong>Pérennisation :</strong> Ancrage culturel</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert alert-info">
+                <strong>🎯 Livrable clé :</strong> L'étude de faisabilité doit produire une recommandation méthodologique argumentée qui servira de base au cahier des charges.
+            </div>
+
+            <!-- Quiz 6 : Application pratique -->
+            <div class="quiz-container">
+                <h3 class="quiz-title">📝 Quiz 6 : Application Pratique</h3>
+                <p class="quiz-description">Testez votre capacité à appliquer vos connaissances (Choix méthodologique + Faisabilité + CDC)</p>
+
+                <div id="quiz6-question" class="quiz-question">
+                    <p id="quiz6-question-text" class="question-text"></p>
+                    <div id="quiz6-answers" class="quiz-answers"></div>
+                    <button id="quiz6-submit" class="quiz-btn" disabled>Valider la réponse</button>
+                </div>
+
+                <div id="quiz6-result" class="quiz-result" style="display:none;">
+                    <div id="quiz6-explanation" class="explanation"></div>
+                    <button id="quiz6-next" class="quiz-btn">Question suivante</button>
+                </div>
+
+                <div class="quiz-footer">
+                    <span id="quiz6-progress">Question 1/5</span>
+                    <span id="quiz6-score">Score: 0/0</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Synthèse -->
+        <section id="synthese" class="section">
+            <h2 class="section-title">Synthèse : Guide de Sélection Méthodologique</h2>
+            
+            <div class="alert alert-success">
+                <strong>🎯 Objectif atteint :</strong> Vous savez maintenant distinguer les méthodologies et argumenter vos choix dans un cahier des charges et une étude de faisabilité.
+            </div>
+
+            <div class="dropdown" data-target="template-analyse">
+                <h3 class="dropdown-title">📋 Template d'Analyse Méthodologique</h3>
+                <div class="dropdown-content" id="template-analyse">
+                    <p><strong>Structure recommandée pour l'analyse méthodologique dans l'étude de faisabilité :</strong></p>
+                    
+                    <div class="cards-grid">
+                        <div class="card card-primary">
+                            <h4>1️⃣ Contexte Projet</h4>
+                            <ul>
+                                <li>Description du projet et objectifs</li>
+                                <li>Contraintes identifiées</li>
+                                <li>Parties prenantes principales</li>
+                                <li>Environnement organisationnel</li>
+                                <li>Historique méthodologique</li>
+                            </ul>
+                        </div>
+                        <div class="card card-secondary">
+                            <h4>2️⃣ Analyse Comparative</h4>
+                            <ul>
+                                <li>Critères de sélection pondérés</li>
+                                <li>Évaluation de chaque méthodologie</li>
+                                <li>Matrice de décision</li>
+                                <li>Analyse des risques</li>
+                                <li>Scénarios alternatifs</li>
+                            </ul>
+                        </div>
+                        <div class="card card-accent">
+                            <h4>3️⃣ Recommandation</h4>
+                            <ul>
+                                <li>Méthodologie recommandée</li>
+                                <li>Justification détaillée</li>
+                                <li>Adaptations spécifiques</li>
+                                <li>Plan de mise en œuvre</li>
+                                <li>Indicateurs de succès</li>
+                            </ul>
+                        </div>
+                        <div class="card card-gradient">
+                            <h4>4️⃣ Impact Projet</h4>
+                            <ul>
+                                <li>Conséquences sur planning</li>
+                                <li>Impact budgétaire</li>
+                                <li>Ressources nécessaires</li>
+                                <li>Formation requise</li>
+                                <li>Points de vigilance</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dropdown" data-target="checklist-selection">
+                <h3 class="dropdown-title">📋 Checklist : Guide de Sélection Méthodologique</h3>
+                <div class="dropdown-content" id="checklist-selection">
+                    <div class="checklist-container">
+                        <div class="checklist-section">
+                            <h4>🔍 Analyse du contexte projet</h4>
+                    <div class="checklist-items">
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Évaluer la clarté et stabilité des exigences (figées = cascade, évolutives = agile)</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Analyser la complexité technique et les risques (connu = cascade, innovation = agile)</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Identifier les contraintes réglementaires et de conformité (strictes = cascade)</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Évaluer l'expérience et la maturité de l'équipe sur la méthodologie choisie</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Analyser la taille et la répartition géographique de l'équipe</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="checklist-section">
+                    <h4>🏢 Évaluation de l'environnement</h4>
+                    <div class="checklist-items">
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Analyser la culture organisationnelle et l'ouverture au changement</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Vérifier la disponibilité et l'implication du client/utilisateur final</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Examiner les contraintes budgétaires et temporelles (flexibles = agile)</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Mesurer la tolérance aux itérations et ajustements</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Évaluer l'infrastructure technique et les outils disponibles</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="checklist-section">
+                    <h4>📊 Faisabilité méthodologique</h4>
+                    <div class="checklist-items">
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Estimer les coûts de formation et d'accompagnement</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Analyser l'impact sur les processus existants</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Évaluer les risques spécifiques à chaque méthodologie</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Définir les critères de succès et indicateurs de suivi</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Planifier les phases de transition et d'adaptation</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="checklist-section">
+                    <h4>📝 Documentation et validation</h4>
+                    <div class="checklist-items">
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Rédiger une argumentation basée sur l'analyse des critères objectifs</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Identifier les risques spécifiques et définir les stratégies de mitigation</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Planifier la formation de l'équipe si nécessaire</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Définir des points de contrôle pour réajustement éventuel en cours de projet</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Préparer les éléments pour le cahier des charges</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="checklist-section">
+                    <h4>✅ Validation finale</h4>
+                    <div class="checklist-items">
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Présenter le choix aux parties prenantes avec justification complète</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Obtenir l'adhésion de l'équipe et du management</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Documenter la décision dans le cahier des charges</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Valider les ressources nécessaires (humaines, techniques, financières)</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Planifier le lancement avec la méthodologie sélectionnée</span>
+                        </label>
+                    </div>
+                </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dropdown" data-target="checklist-cdc">
+                <h3 class="dropdown-title">📄 Checklist : Mise en Place d'un Cahier des Charges</h3>
+                <div class="dropdown-content" id="checklist-cdc">
+                    <div class="checklist-container">
+                <p style="margin-bottom: 2rem; font-style: italic;">Guide pratique pour rédiger un cahier des charges complet et professionnel</p>
+
+                <div class="checklist-section">
+                    <h4>📋 1. Présentation générale du projet</h4>
+                    <div class="checklist-items">
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Contexte et origine du projet (problématique identifiée)</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Objectifs stratégiques et opérationnels (SMART)</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Périmètre du projet (inclusions et exclusions)</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Parties prenantes (sponsor, utilisateurs, équipe)</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Bénéfices attendus et indicateurs de succès</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="checklist-section">
+                    <h4>🎯 2. Besoins fonctionnels et techniques</h4>
+                    <div class="checklist-items">
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Exigences fonctionnelles détaillées (user stories ou cas d'usage)</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Exigences techniques (architecture, technologies, performance)</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Exigences de sécurité et conformité (RGPD, normes sectorielles)</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Contraintes d'ergonomie et d'accessibilité (UX/UI)</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Exigences de compatibilité et d'intégration (systèmes existants)</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Critères de performance et de disponibilité (SLA)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="checklist-section">
+                    <h4>📊 3. Choix méthodologique et organisation</h4>
+                    <div class="checklist-items">
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Analyse comparative des méthodologies (Cascade, Agile, Hybride)</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Justification du choix méthodologique (critères objectifs)</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Description des phases et livrables attendus</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Rôles et responsabilités (RACI)</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Processus de validation et de prise de décision</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Gouvernance du projet (comités, reporting)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="checklist-section">
+                    <h4>⏱️ 4. Planning et jalons</h4>
+                    <div class="checklist-items">
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Macro-planning avec phases et jalons clés</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Dates clés et contraintes temporelles</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Dépendances et chemin critique</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Marges et buffers pour les risques</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Points de contrôle et revues</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="checklist-section">
+                    <h4>💰 5. Budget et ressources</h4>
+                    <div class="checklist-items">
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Estimation budgétaire détaillée par phase</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Ressources humaines nécessaires (profils, charges)</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Ressources matérielles et infrastructures</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Licences logicielles et outils</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Coûts de formation et d'accompagnement</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Réserve pour imprévus (10-20% du budget)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="checklist-section">
+                    <h4>⚠️ 6. Gestion des risques</h4>
+                    <div class="checklist-items">
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Identification des risques principaux (technique, organisationnel, humain)</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Évaluation probabilité × impact pour chaque risque</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Stratégies de mitigation et plans de contingence</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Responsables de suivi pour chaque risque</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Indicateurs d'alerte précoce</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="checklist-section">
+                    <h4>✅ 7. Critères de recette et qualité</h4>
+                    <div class="checklist-items">
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Critères d'acceptation pour chaque livrable majeur</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Processus et responsables de la recette</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Plan de tests (unitaires, intégration, acceptation)</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Normes et standards de qualité à respecter</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Procédures de gestion des anomalies</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="checklist-section">
+                    <h4>🚀 8. Déploiement et transition</h4>
+                    <div class="checklist-items">
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Stratégie de déploiement (big bang, progressif, pilote)</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Plan de migration des données (si applicable)</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Formation des utilisateurs finaux</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Documentation utilisateur et technique</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Support post-déploiement (niveau, durée)</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Gestion du changement organisationnel</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="checklist-section">
+                    <h4>📝 9. Aspects contractuels et juridiques</h4>
+                    <div class="checklist-items">
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Modalités de contractualisation (forfait, régie, mixte)</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Propriété intellectuelle et droits d'exploitation</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Clauses de confidentialité et NDA</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Garanties et pénalités de retard</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Conditions de réversibilité</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Assurances et responsabilités</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="checklist-section">
+                    <h4>🔄 10. Maintenance et évolutions</h4>
+                    <div class="checklist-items">
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Type de maintenance prévue (corrective, évolutive, adaptative)</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Durée et modalités de la garantie</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Processus de demande d'évolution</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>SLA et temps de réponse en cas d'incident</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>Roadmap d'évolutions futures envisagées</span>
+                        </label>
+                    </div>
+                </div>
+
+                        <div class="alert alert-success" style="margin-top: 2rem;">
+                            <strong>✅ Validation finale du Cahier des Charges :</strong>
+                            <ul style="margin-top: 1rem;">
+                                <li>Relecture par toutes les parties prenantes</li>
+                                <li>Validation juridique et conformité</li>
+                                <li>Approbation formelle du sponsor</li>
+                                <li>Gestion des versions et archivage</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dropdown" data-target="erreurs-eviter">
+                <h3 class="dropdown-title">⚠️ Erreurs Fréquentes à Éviter</h3>
+                <div class="dropdown-content" id="erreurs-eviter">
+                    <div class="cards-grid">
+                        <div class="card card-primary">
+                            <h4>🚫 Erreurs d'Analyse</h4>
+                            <ul>
+                                <li><strong>Biais technologique :</strong> Choisir selon les préférences techniques</li>
+                                <li><strong>Mode management :</strong> Suivre les tendances sans analyse</li>
+                                <li><strong>Simplification :</strong> Croire qu'une méthode résoudra tous les problèmes</li>
+                                <li><strong>Négligence culturelle :</strong> Sous-estimer l'impact organisationnel</li>
+                                <li><strong>Analyse incomplète :</strong> Omettre certains critères importants</li>
+                            </ul>
+                        </div>
+                        <div class="card card-secondary">
+                            <h4>🚫 Erreurs de Mise en Œuvre</h4>
+                            <ul>
+                                <li><strong>Formation insuffisante :</strong> Équipe non préparée</li>
+                                <li><strong>Support inadéquat :</strong> Manque d'accompagnement</li>
+                                <li><strong>Rigidité excessive :</strong> Application dogmatique</li>
+                                <li><strong>Changement brutal :</strong> Transition non progressive</li>
+                                <li><strong>Métriques inadaptées :</strong> Mauvais indicateurs de succès</li>
+                            </ul>
+                        </div>
+                        <div class="card card-accent">
+                            <h4>🚫 Erreurs de Pilotage</h4>
+                            <ul>
+                                <li><strong>Manque de sponsoring :</strong> Support management insuffisant</li>
+                                <li><strong>Communication défaillante :</strong> Équipes non alignées</li>
+                                <li><strong>Résistance ignorée :</strong> Opposition non traitée</li>
+                                <li><strong>Hybridation excessive :</strong> Perte de cohérence</li>
+                                <li><strong>Abandon prématuré :</strong> Retour en arrière trop rapide</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert alert-info">
+                <strong>💡 Ressources additionnelles :</strong>
+                <ul>
+                    <li><a href="https://scrumguides.org" target="_blank">Scrum Guide officiel</a> - Documentation de référence</li>
+                    <li><a href="https://agilemanifesto.org" target="_blank">Manifeste Agile</a> - Valeurs et principes originaux</li>
+                    <li><a href="https://www.pmi.org" target="_blank">PMI</a> - Standards de gestion de projet</li>
+                    <li><a href="https://www.scaledagileframework.com" target="_blank">SAFe</a> - Framework Agile à l'échelle</li>
+                    <li><a href="https://less.works" target="_blank">LeSS</a> - Large-Scale Scrum</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 - Formation Méthodologies de Gestion de Projet - Étude de Faisabilité et Cahier des Charges - Tous droits réservés</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
